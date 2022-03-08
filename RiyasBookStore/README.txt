@@ -1,6 +1,6 @@
 ﻿***************************************
 *           Assignment-2              *
-*           WEB 452- Winter'33        *
+*           WEB 452- Winter'22        *
 *              2022-03-08             *
 *             Riya Shah               *
 *            00000000                 *
@@ -22,3 +22,6 @@ modified the view/home/index.cshtmls
 
 1119
 Create a git repo
+
+1123
+Repo cretated..now confirmed
