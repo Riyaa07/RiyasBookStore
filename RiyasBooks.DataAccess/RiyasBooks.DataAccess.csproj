@@ -10,4 +10,9 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.11" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RiyasBooks.Models\RiyasBooks.Models.csproj" />
+    <ProjectReference Include="..\RiyasBooks.Utility\RiyasBooks.Utility.csproj" />
+  </ItemGroup>
+
 </Project>

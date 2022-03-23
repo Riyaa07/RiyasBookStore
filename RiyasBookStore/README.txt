@@ -95,3 +95,57 @@ Refrenced datacess and model to the main project
 
 2344
 Bulied and fixed all the errors
+
+23-03-2002
+
+1110
+created a SD file and modifed it
+
+1112
+Refrenecd to main file
+
+1114
+Deted model and data from dataacess
+
+1116
+Created area customber in Area
+
+1120
+I copied from scaffolding to the startup.cs
+
+1124
+Moved the homecontroller in customer controller
+
+1126
+Modified it and deleted the model and data.
+
+1128
+Changed the namespace 
+
+1130
+Local host not found uhhh!!!!
+
+//goggled what to do nothing found 
+// I again clone from git and reapeated all this step of today
+// This is still hapening
+
+// I again 2time did this all I am so mad why is it not working!!!!!!!
+
+1215
+Area:exists i copied from scaffolding damned riya idioit area=customber
+
+1217
+It runed so happy :)
+
+1219
+Copied pasted the viewimport and viewstart and changed its path
+
+1225
+It is working finally so happy i did it wow!
+
+//I have to upload on git by commiting
+//oh no I have to find charning point
+
+1235
+I am going to commit and named it as completed part-1 of assignment 2
+
