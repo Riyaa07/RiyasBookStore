@@ -61,9 +61,37 @@ It worked thankgod
 1734
 Changed the name of dropdown to content Management
 
-20:20
+2020
 I am going to upload it on git
 
-20:22
+2022
 Written completed and now just going to commit it hopefully it works 
 if it does than Byee.....see you for next step in few hrs.
+
+2310
+Created 3 new projects of class library
+
+2312
+Moved the model folder in that dataacess and deleted the original
+
+2314
+Installed the package manager
+
+2315
+deleted the migration
+
+2318
+Moved the model to that Models and deleted the original
+
+2320
+Made some changes in error.cshtml
+
+2323
+renamed the folder view to modelviews
+
+2327
+Refrenced datacess and model to the main project
+
+
+2344
+Bulied and fixed all the errors
