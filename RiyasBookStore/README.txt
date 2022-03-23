@@ -25,3 +25,45 @@ Create a git repo
 
 1123
 Repo cretated..now confirmed
+
+2022-03-22
+
+1700
+Opned the ppt for bootstrap
+
+1702
+Downloaded the LUX theme bootstrap
+
+1705
+In LIB repladed the bootstrap the downloaded from bootswatch.com
+
+1710
+Changed the site.css of main fildoer css
+
+1715
+Added some links in layout.cshtl also some js in it
+
+1718
+Made drop-down navigation
+
+1720
+Idk why it is not working
+
+1725
+I saw a B icon in the slides figuring out what to write
+
+1729
+copy paste it from the site in my layout.cs dropdown
+
+1732
+It worked thankgod
+
+1734
+Changed the name of dropdown to content Management
+
+20:20
+I am going to upload it on git
+
+20:22
+Written completed and now just going to commit it hopefully it works 
+if it does than Byee.....see you for next step in few hrs.
