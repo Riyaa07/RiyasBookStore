@@ -222,3 +222,15 @@ NO man i M just copy pasting from file sir has provided.
 
 1724
 Uploading to git by saying completed repo
+
+1738
+Modified the CategoryRepository.cs
+
+1744
+Modified ICategory and again some error popped up in categoryrepo.cs
+
+1750
+fixed the errors in categoryrepo.cs
+
+1751
+Uploading this to git as slide9
