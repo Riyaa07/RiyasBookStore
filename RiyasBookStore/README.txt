@@ -165,3 +165,15 @@ Going to commit
 
 1328
 Created a new branch
+
+1342
+Added migration file named AddMigration into .DataAccess
+
+1345
+updated the database
+
+1348
+Reviwed database in sql explorer.
+
+1349
+Runed the app now going to commit.
