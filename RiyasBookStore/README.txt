@@ -149,3 +149,16 @@ It is working finally so happy i did it wow!
 1235
 I am going to commit and named it as completed part-1 of assignment 2
 
+2022-03-29
+
+1105
+Created admin area in Areas
+
+1106
+Copied home and view files from customers to the view folder of Admin
+
+1107
+Deted data and model folder also controller floder from Admin.
+
+1155
+Going to commit
