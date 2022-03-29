@@ -247,5 +247,19 @@ There are lots of error in sp_call
 1900
 Finally everything solved
 
-19013
+1913
 Going to upload this on git
+
+1915
+Created UnitOfWork and IUnitOfWork
+
+1940
+completed modification of Iunitofwork
+
+1945
+Added in startup.cs
+
+1947
+going to upload on git
+
+
