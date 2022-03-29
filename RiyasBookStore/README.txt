@@ -234,3 +234,18 @@ fixed the errors in categoryrepo.cs
 
 1751
 Uploading this to git as slide9
+
+1800
+Created sp_call and isp_call
+
+1815
+tons of lines to modify in sp_call
+
+1845
+There are lots of error in sp_call
+
+1900
+Finally everything solved
+
+19013
+Going to upload this on git
