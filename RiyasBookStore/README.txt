@@ -177,3 +177,24 @@ Reviwed database in sql explorer.
 
 1349
 Runed the app now going to commit.
+
+1400
+Created a new class name category in .Models
+
+1402
+Modified the category class
+
+1404
+Added AddCategoryToDb migration to riyabookstore
+
+1407
+Modified the Application DbContext.css
+
+1410
+re-run the add-migration later it asked me for the name
+
+1415
+Deleted the copy of that Todb migration
+
+1417
+Updated the database
