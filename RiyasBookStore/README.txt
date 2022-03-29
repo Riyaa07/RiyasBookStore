@@ -198,3 +198,27 @@ Deleted the copy of that Todb migration
 
 1417
 Updated the database
+
+1419
+Commitment has made in gitub
+
+1642
+Created a repository folder in .DataAccess
+
+1643
+Created a IRepository folder inside the repository folder.
+
+1645
+Created interface name Irepository in that irepo folder
+
+1705
+Modified this interface.
+
+1710
+Created and modified the repository.cs in repo folder
+
+1722
+NO man i M just copy pasting from file sir has provided.
+
+1724
+Uploading to git by saying completed repo
