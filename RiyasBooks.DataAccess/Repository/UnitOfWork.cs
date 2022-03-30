@@ -6,7 +6,7 @@ using System.Text;
 
 namespace RiyasBooks.DataAccess.Repository
 {
-    public class UnitOfWork
+    public class UnitOfWork : IUnitOfWork
     {
         private readonly ApplicationDbContext _db;
 
@@ -18,7 +18,8 @@ namespace RiyasBooks.DataAccess.Repository
         }
 
         public ICategoryRepository Category { get; private set; }
-        public ISP_Call SP_Call { get; private set; }
+
+        public ISP_Call SP_Call{ get; private set; }
 
         public void Dispose()
         {

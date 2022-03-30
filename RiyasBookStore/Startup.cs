@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using RiyasBookStore.DataAccess.Data;
 using RiyasBooks.DataAccess.Repository;
+using RiyasBooks.DataAccess.Repository.IRepository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,7 +38,7 @@ namespace RiyasBookStore
             //(options => options.SignIn.RequireConfirmedAccount = true)
             services.AddDefaultIdentity<IdentityUser>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
-            services.AddScoped<UnitOfWork, UnitOfWork>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddControllersWithViews();
         }
 
@@ -73,3 +74,4 @@ namespace RiyasBookStore
         }
     }
 }
+

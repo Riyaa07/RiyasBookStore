@@ -4,9 +4,10 @@ using System.Text;
 
 namespace RiyasBooks.DataAccess.Repository.IRepository
 {
-    interface IUnitOfWork : IDisposable
+   public interface IUnitOfWork : IDisposable
     {
         ICategoryRepository Category { get; }
-        ISP_Call Sp_Call { get; }
+        ISP_Call SP_Call { get; }
     }
 }
+

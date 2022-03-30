@@ -280,4 +280,44 @@ Runed the app it works!!
 2027
 Going to upload on git by saying that Category worked linked in  layout and in dropdwon
 
+2030
+Modified the index.cshtml
+
+2036
+Created new js file and written code of it from ppt
+
+2047
+copy pasted from index.cshtml
+
+2050
+In index linked the js file
+
+2100
+Added the category controller
+
+2125
+Added a upsert and modified it
+
+2145
+Created partial view of edit and create
+
+2150
+Modified and linked this partial view in Upsert
+
+2200
+It gave in an internal error
+
+//I read many documnets
+//search on youtube 
+
+why is my _createandtolistbutton file is not avaible????
+//I am stupid wth I named my file as _createandtolistbutton and trying to link createandbacktolist
+
+2250
+I made the change of that name and app runs so happy:)
+
+2306
+Going to make commit on git that new category button works
+
+
 
