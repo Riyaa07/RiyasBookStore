@@ -33,9 +33,31 @@ namespace RiyasBookStore.Areas.Admin.Controllers
             category = _unitOfWork.Category.Get(id.GetValueOrDefault());
             if (category == null)
             {
-                return NotFound();
+                return NotFound(category);
             }
-            return View();
+            return View(category);
+        }
+        //use Http Post to define the post-action method
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Upsert(Category category)
+        {
+            if (ModelState.IsValid)
+            {
+                if (category.Id == 0)
+                {
+                    _unitOfWork.Category.Add(category);
+
+                }
+                else
+                {
+                    _unitOfWork.Category.Update(category);
+                }
+                _unitOfWork.Save();
+                return RedirectToAction(nameof(Index));
+
+            }
+            return View(category);
         }
 
         // API calls here 
@@ -48,7 +70,19 @@ namespace RiyasBookStore.Areas.Admin.Controllers
             var allObj = _unitOfWork.Category.GetAll();
             return Json(new { data = allObj });
         }
-        #endregion
+        [HttpDelete]
+        public IActionResult Delete(int id)
+        {
+            var objFromDb = _unitOfWork.Category.Get(id);
+            if (objFromDb == null)
+            {
+                return Json(new { sucess = false, message = "Error while deleting" });
+            }
+            _unitOfWork.Category.Remove(objFromDb);
+            _unitOfWork.Save();
+            return Json(new { sucess = true, message = "Deleted sucessfull" });
+            #endregion
+        }
     }
 }
 

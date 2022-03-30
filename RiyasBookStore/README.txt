@@ -319,5 +319,23 @@ I made the change of that name and app runs so happy:)
 2306
 Going to make commit on git that new category button works
 
+2315
+Created a new method in upsert
+
+2330
+Removed _dbsave() from categoryrepo
+
+2348
+Modfied the upsert again
+
+2410
+Modifed the js file catgeory
+
+2414
+runded the application
+
+2426
+Making git comment saying completed this part 2
+
 
 
