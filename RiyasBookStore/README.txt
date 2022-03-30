@@ -262,4 +262,22 @@ Added in startup.cs
 1947
 going to upload on git
 
+1952
+Created controller folder in admin
+
+1958
+added empty raxor view od categorycontroller
+
+2012
+Modified the categorycontroller
+
+2020
+Linkned it in _layout.cshtml
+
+2025
+Runed the app it works!!
+
+2027
+Going to upload on git by saying that Category worked linked in  layout and in dropdwon
+
 
