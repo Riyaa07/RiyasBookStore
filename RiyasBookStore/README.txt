@@ -338,4 +338,10 @@ runded the application
 Making git comment saying completed this part 2
 
 
+2022-03-30
 
+1200
+There were many spelling mistake I changed it and it showed me show warning cant see data
+
+1202
+Uploading to git

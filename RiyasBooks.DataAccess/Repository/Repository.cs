@@ -31,6 +31,7 @@ namespace RiyasBooks.DataAccess.Repository
 
         public IEnumerable<T> GetAll(Expression<Func<T, bool>> filter = null, Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null, string includeProperties = null)
         {
+            //throw new NotImplementedException();
             IQueryable<T> query = dbSet;
             if (filter != null)
             {
