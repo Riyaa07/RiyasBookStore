@@ -345,3 +345,18 @@ There were many spelling mistake I changed it and it showed me show warning cant
 
 1202
 Uploading to git
+
+1211
+spell of column is wrong after that it displaye me the datatable
+
+1220
+Why delete is happening with after refresh??
+
+1230
+Addeded the api call in categorycontroller 
+
+1232
+Thankgod it runed wow!
+
+1233
+Going to commit on git finally everything is done!!

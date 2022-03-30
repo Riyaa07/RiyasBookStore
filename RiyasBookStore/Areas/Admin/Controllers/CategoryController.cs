@@ -1,11 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using RiyasBooks.DataAccess.Repository.IRepository;
+using RiyasBooks.Models;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using RiyasBooks.DataAccess.Repository.IRepository;
-using RiyasBooks.DataAccess.Repository;
-using RiyasBooks.Models;
 
 namespace RiyasBookStore.Areas.Admin.Controllers
 {
@@ -13,11 +12,11 @@ namespace RiyasBookStore.Areas.Admin.Controllers
     public class CategoryController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
-
         public CategoryController(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
         }
+
         public IActionResult Index()
         {
             return View();
@@ -30,6 +29,7 @@ namespace RiyasBookStore.Areas.Admin.Controllers
             {
                 return View(category);
             }
+
             category = _unitOfWork.Category.Get(id.GetValueOrDefault());
             if (category == null)
             {
@@ -37,7 +37,7 @@ namespace RiyasBookStore.Areas.Admin.Controllers
             }
             return View(category);
         }
-        //use Http Post to define the post-action method
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Upsert(Category category)
@@ -47,7 +47,7 @@ namespace RiyasBookStore.Areas.Admin.Controllers
                 if (category.Id == 0)
                 {
                     _unitOfWork.Category.Add(category);
-
+                    _unitOfWork.Save();
                 }
                 else
                 {
@@ -60,31 +60,31 @@ namespace RiyasBookStore.Areas.Admin.Controllers
             return View(category);
         }
 
-        // API calls here 
+
+        // API Calls
         #region API CALLS
         [HttpGet]
 
         public IActionResult GetAll()
         {
-            // return NotFound();
+            //return NotFound
             var allObj = _unitOfWork.Category.GetAll();
             return Json(new { data = allObj });
+
         }
+
         [HttpDelete]
         public IActionResult Delete(int id)
         {
             var objFromDb = _unitOfWork.Category.Get(id);
             if (objFromDb == null)
             {
-                return Json(new { sucess = false, message = "Error while deleting" });
+                return Json(new { success = true, message = "Erroe while Deleting" });
             }
             _unitOfWork.Category.Remove(objFromDb);
             _unitOfWork.Save();
-            return Json(new { sucess = true, message = "Deleted sucessfull" });
+            return Json(new { success = true, message = "Delete Successful" });
             #endregion
         }
     }
 }
-
-
-
