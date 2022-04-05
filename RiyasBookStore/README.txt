@@ -360,3 +360,10 @@ Thankgod it runed wow!
 
 1233
 Going to commit on git finally everything is done!!
+
+
+//sir told me to add time stamp
+
+04-4-22
+21:13 202203291741126 is the timestamp of migration named addmigration.
+
