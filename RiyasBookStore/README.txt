@@ -440,3 +440,36 @@ Runed it worked
 //happy :) :) :)
 
 //Completed 3.1 CoverType CRDU uploading to git
+
+5-4-22
+
+1029
+Created Product class in .Models
+
+1041
+Modified the product.cs from slide
+
+1042
+Added a line in applicationdb of data folder
+
+1043
+Added migartion named addProductToDb
+
+1044
+20220405144439_addProductToDb is created .
+
+1050
+Added required to Title , Ibsn , author in product.cs
+
+1051
+Added migration name addValidationToProduct
+
+1052
+20220405145044_addValidationToProduct is name of validation with timestamp
+
+1129
+Craeted Iproductrepo and modified
+created productrepo and modified from slide
+
+1137
+Added product to UnitOfWork and IunitOfwork
