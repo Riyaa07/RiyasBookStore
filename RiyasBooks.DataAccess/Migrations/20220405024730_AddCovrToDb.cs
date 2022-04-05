@@ -2,12 +2,12 @@
 
 namespace RiyasBooks.DataAccess.Migrations
 {
-    public partial class AddCategorToDb : Migration
+    public partial class AddCovrToDb : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Categories",
+                name: "CoverTypes",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -16,16 +16,14 @@ namespace RiyasBooks.DataAccess.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Categories", x => x.Id);
+                    table.PrimaryKey("PK_CoverTypes", x => x.Id);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Categories");
+                name: "CoverTypes");
         }
-
- 
     }
 }

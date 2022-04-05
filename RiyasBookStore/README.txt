@@ -367,3 +367,76 @@ Going to commit on git finally everything is done!!
 04-4-22
 21:13 202203291741126 is the timestamp of migration named addmigration.
 
+
+*******************************************************************
+*******************************************************************
+                         PART -3
+*******************************************************************
+********************************************************************
+
+04-4-22
+
+21:24
+In models created covertype.cs with id and name
+
+21:30
+craeted CoverTypeRepository and copied and modified the code
+
+21:40
+created Icoverrepo and copied and modified the code
+
+22:10
+added cover type to Unit of work and Iunit
+
+22:14
+In admin Views folder added covertype folder
+
+22:16
+Created the index file of it
+
+22:20
+In admin areas created a covertypecontroller.cs and modified the code
+
+22:38
+Added the link to this covertype controller in layout for navigation
+
+22:42
+Created a upsert and modeified it
+
+22:45
+Try to run but failed
+
+//What am I missing Oh yah Migration
+
+22:50
+careated a new migartion named AddCoverToDb
+
+22:54
+Added a line in application db of data folder and updated the database
+
+22:57
+re-run the migartion
+
+//I had got some errors while re-run in writing name that already exists
+//I named migartion than as AddCovrTodb
+
+20220405024730 is the time stamp of the migaration
+
+23:10
+Updated the database again
+
+//I forgot js
+
+23:15
+Create js file and linked it with index.cshtml of Admin-Views-Covertype folder.
+
+23:20
+Verified that I have done everything as some files I forgort and added in between.
+
+23:23
+Runed it worked
+
+//Thankgod I am able to create and delte things in cover type
+//happy :) :) :)
+
+//Completed 3.1 CoverType CRDU uploading to git
