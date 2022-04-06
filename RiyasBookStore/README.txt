@@ -573,5 +573,8 @@ I runed and it worked wow
 2344
 Time to commit this now to github . Completed assgintment 2 part 3
 
+6-4-22
+made some changes in category.js so i can update the already enter files
+
 
 
