@@ -9,38 +9,13 @@ using System.Text;
 
 namespace RiyasBooks.DataAccess.Repository
 {
-   public class ProductRepository : Repository<ProductRepository>, IProductRepository
+   public class ProductRepository : Repository<Product>, IProductRepository
     {
 
         private readonly ApplicationDbContext _db;
         public ProductRepository(ApplicationDbContext db) : base(db)
         {
             _db = db;
-        }
-
-        public void Add(Product entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<Product> GetAll(Expression<Func<Product, bool>> filter = null, Func<IQueryable<Product>, IOrderedQueryable<Product>> orderBy = null, string includeProperties = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Product GetFirstOrDefault(Expression<Func<Product, bool>> filter = null, string includeProperties = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Remove(Product entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void RemoveRange(IEnumerable<Product> entity)
-        {
-            throw new NotImplementedException();
         }
 
         public void Update(Product product)
@@ -63,9 +38,6 @@ namespace RiyasBooks.DataAccess.Repository
             }
         }
 
-        Product IRepository<Product>.Get(int id)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

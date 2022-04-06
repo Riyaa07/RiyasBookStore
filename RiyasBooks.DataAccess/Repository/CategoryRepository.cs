@@ -1,4 +1,5 @@
-﻿using RiyasBooks.DataAccess.Repository.IRepository;
+﻿using RiyasBooks.DataAccess.Repository;
+using RiyasBooks.DataAccess.Repository.IRepository;
 using RiyasBooks.Models;
 using RiyasBookStore.DataAccess.Data;
 using System;

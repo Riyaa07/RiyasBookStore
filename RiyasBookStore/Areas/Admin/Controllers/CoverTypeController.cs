@@ -23,40 +23,40 @@ namespace RiyasBookStore.Areas.Admin.Controllers
 
         public IActionResult Upsert(int? id)
         {
-            CoverType covertype = new CoverType();
+            CoverType coverType = new CoverType();
             if (id == null)
             {
-                return View(covertype);
+                return View(coverType);
             }
 
-            covertype = _unitOfWork.CoverType.Get(id.GetValueOrDefault());
-            if (covertype == null)
+            coverType = _unitOfWork.CoverType.Get(id.GetValueOrDefault());
+            if (coverType == null)
             {
-                return NotFound(covertype);
+                return NotFound(coverType);
             }
-            return View(covertype);
+            return View(coverType);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Upsert(CoverType covertype)
+        public IActionResult Upsert(CoverType coverType)
         {
             if (ModelState.IsValid)
             {
-                if (covertype.Id == 0)
+                if (coverType.Id == 0)
                 {
-                    _unitOfWork.CoverType.Add(covertype);
+                    _unitOfWork.CoverType.Add(coverType);
                     _unitOfWork.Save();
                 }
                 else
                 {
-                    _unitOfWork.CoverType.Update(covertype);
+                    _unitOfWork.CoverType.Update(coverType);
                 }
                 _unitOfWork.Save();
                 return RedirectToAction(nameof(Index));
 
             }
-            return View(covertype);
+            return View(coverType);
 
         }
 

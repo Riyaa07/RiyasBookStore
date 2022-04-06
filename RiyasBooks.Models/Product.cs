@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -29,7 +29,7 @@ namespace RiyasBooks.Models
         public int CategoryId { get; set; }
 
         [ForeignKey("CategoryId")]
-        public Category category { get; set; }
+        public Category Category { get; set; }
 
         [Required]
         public int CoverTypeId { get; set; }
