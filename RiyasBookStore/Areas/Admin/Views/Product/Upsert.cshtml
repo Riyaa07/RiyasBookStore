@@ -1,9 +1,7 @@
 ﻿@model RiyasBooks.Models.ViewModels.ProductVM;
-@{
-    Layout = "~/Views/Shared/_Layout.cshtml";
-    var title = "Create Product";
-}
 
+@{ Layout = "~/Views/Shared/_Layout.cshtml";
+                var title = "Create Product"; }
 
 <form method="post" enctype="multipart/form-data">
     <div class="row p-3 border">
@@ -12,8 +10,7 @@
         {
             // edit
             title = "Edit Product";
-            <input type="hidden" asp-for="Product.Id" />
-        }
+<input type="hidden" asp-for="Product.Id" />}
         <div class="col-12 border-bottom">
             <h2 class="text-primary">@title</h2>
         </div>
@@ -94,19 +91,17 @@
                 <div class="col-8 offset-4">
                     @if (Model.Product.Id != 0)
                     {
-                        <partial name="_EditAndBackToListButton" model="Model.Product.Id" />
-                    }
+        <partial name="_EditAndBackToListButton" model="Model.Product.Id" /> }
                     else
                     {
-                        <div class="row">
-                            <div class="col">
-                                <button type="submit" onclick="return validateInput()" class="btn btn-primary form-control">Create</button>
-                            </div>
-                            <div class="col">
-                                <a asp-action="Index" class="btn btn-success form-control">Back to List</a>
-                            </div>
-                        </div>
-                    }
+        <div class="row">
+            <div class="col">
+                <button type="submit" onclick="return validateInput()" class="btn btn-primary form-control">Create</button>
+            </div>
+            <div class="col">
+                <a asp-action="Index" class="btn btn-success form-control">Back to List</a>
+            </div>
+        </div>}
                 </div>
             </div>
         </div>
@@ -115,22 +110,22 @@
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
-   <script src="https://cdn.tiny.cloud/1/tdisqmux7xkg13s84nbk3g0m6oawkfg4f58k1oo5162fis9s/tinymce/5/tinymce.min.js" ></script>
-}
+    <script src="https://cdn.tiny.cloud/1/8g7yezr0zvoufdayrwjqbd4g1uoc64g3zz8big48e5q0q4c0/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 
-<script>
-    tinymce.init({
-        selector: 'textarea',
-        plugins: 'lists',
-        menubar: 'file edit format'
-    });
+    <script>
+        tinymce.init({
+            selector: 'textarea',
+            plugins: 'lists',
+            menubar: 'file edit format'
+        });
 
-    function validateInput() {
-        if (document.getElementById("uploadBox").value = "") {
-            swal("Error", "Please select an image", "error");
-            return false;
+        function validateInput() {
+            if (document.getElementById("uploadBox").value = "") {
+                swal("Error", "Please select an image", "error");
+                return false;
+            }
+            return true;
         }
-        return true;
-    }
-</script>
+    </script>
 
+}

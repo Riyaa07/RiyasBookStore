@@ -473,3 +473,105 @@ created productrepo and modified from slide
 
 1137
 Added product to UnitOfWork and IunitOfwork
+
+1320
+Craeted productcontroller and modified it
+
+1329
+Created a new productMv and modified it
+
+1355
+Added Iaction Upsert in productcontroller
+
+1409
+Added the api call with category and  covertype
+
+1412
+in product folder area-view-product craeted index.cshtml
+
+1422
+Modidied it from slides
+
+1430
+Created a js folder of product
+
+1432
+linked product to layout
+
+1437
+Created upsert.cshtml in product and pasted from provided files code
+
+1440
+Created tiny cloud account
+
+//Idk where to find script
+// I copied from html prodvided there
+
+1444
+Added the tiny cloud script in upsert
+
+1447
+It gave me an error. It is some unhandled expection 
+
+1530
+I have checked all files so far no errors idk what to do
+
+//Need a break
+//time for a walk on riverside
+
+16:55
+I rechecked all the files but cant find errors
+
+//Deleting controller and making it again
+
+1710
+I re-craeted controller
+
+//It is still not working
+
+1725
+reacreated the productMv
+
+//I cant figure out whats happening
+
+//Time to google
+// I have read many documentations its sucks nothing works for it
+
+1755
+I checked again nothing worked
+
+//watch some reels for mind fresh
+
+//Time to google again
+// from last 2hr I watched yt and read documentations for solving error
+// I am geeting crazy
+
+2020
+I mailed sir to ask whats wrong anyway ik he is not doing to respond but took a 0.00001% of chance.
+
+2045
+tried some lines of codes from google but didnt worked
+
+//I am geeting hungry but I wanna finish this
+
+2120
+Oh god I figured out what is wrong there was a space bettwen category and covertype i removed it and it worked.
+Its stupid how can a space matters so much????????
+
+2134
+I did upsert post method productcontroller
+
+2200
+I rechecked all files hope so no more errors
+
+2203
+I runed and it worked wow
+
+//Finally finished all the parts of part 3
+// I will talk to my parents now
+
+2344
+Time to commit this now to github . Completed assgintment 2 part 3
+
+
+

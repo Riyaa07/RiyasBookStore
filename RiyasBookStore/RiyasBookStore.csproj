@@ -29,4 +29,8 @@
     <ProjectReference Include="..\RiyasBooks.Utility\RiyasBooks.Utility.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\Images\Products\" />
+  </ItemGroup>
+
 </Project>

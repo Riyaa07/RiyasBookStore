@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.IO;
 using System.Threading.Tasks;
 using RiyasBooks.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -56,6 +57,29 @@ namespace RiyasBookStore.Areas.Admin.Controllers
             }
             return View(productVM);
         }
+
+        //post method
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Upsert(Product product)
+        {
+            if (ModelState.IsValid)
+            {
+                if (product.Id == 0)
+                {
+                    _unitOfWork.Product.Add(product);
+                }
+                else
+                {
+                    _unitOfWork.Product.Update(product);
+                }
+                _unitOfWork.Save();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(product);
+        }
+
         //API calls
         #region API CALLS
         [HttpGet]
@@ -63,10 +87,11 @@ namespace RiyasBookStore.Areas.Admin.Controllers
         public IActionResult GetAll()
         {
             //return NotFound
-            var allObj = _unitOfWork.Product.GetAll(includeProperties:"Category , CoverType");
+            var allObj = _unitOfWork.Product.GetAll(includeProperties:"Category,CoverType");
             return Json(new { data = allObj });
 
         }
+      
 
         [HttpDelete]
         public IActionResult Delete(int id)
