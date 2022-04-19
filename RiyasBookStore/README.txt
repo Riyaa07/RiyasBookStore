@@ -576,5 +576,17 @@ Time to commit this now to github . Completed assgintment 2 part 3
 6-4-22
 made some changes in category.js so i can update the already enter files
 
+19-4-2022
+
+10:30
+SqlException: The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Products_CoverTypes_CategoryId". The conflict occurred in database "aspnet-RiyasBookStore", table "dbo.CoverTypes", column 'Id'.
+The statement has been terminated.
+
+16:43
+I cannot solve it 
+
+16:45 
+made some changes in upsert as covertype was giving options of category
+
 
 
