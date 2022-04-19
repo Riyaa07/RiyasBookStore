@@ -588,5 +588,50 @@ I cannot solve it
 16:45 
 made some changes in upsert as covertype was giving options of category
 
+//Decided to do future with that error nevermind
+
+17:00
+Made some changes in ProductRepository in repo folder of dataAccess
+
+17:05
+Added code inside the SD.cs
+
+17:15
+modified the product.cs by adding price field
+
+//tried to update database still it showed me error while opening  that price field is not avalable
+
+Added the migration of that 
+
+20220419213135_AddmodifiedproducttoDb is the new name of migration
+
+17:25
+Added some lines of code in upsert of product
+
+17:30
+Modified the CoverType and Product Controller
+
+//opps! I fogot to add price 100 in upsert
+
+1740
+Added that price100 div's in upsert
+
+1745
+Created the index.cshtml in way that it accpets the product list and display it.
+
+1800
+I got an error after loading the page it directly threw me out
+
+System.NullReferenceException: 'Object reference not set to an instance of an object.'
+Only this much was shown in error no more details
+
+I googled and saw some videos realted it cant understand what to do
+
+//Cheked all files from that given reop cant find any error
+
+//Oh god!! I am so dumb I forget to modify the homecontroller
+
+18:40
+updated the homecontroller
 
 
