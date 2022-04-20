@@ -576,6 +576,11 @@ Time to commit this now to github . Completed assgintment 2 part 3
 6-4-22
 made some changes in category.js so i can update the already enter files
 
+************************************************************************
+**********************************************************************
+                     PART-4
+**********************************************************************
+***********************************************************************
 19-4-2022
 
 10:30
@@ -633,5 +638,18 @@ I googled and saw some videos realted it cant understand what to do
 
 18:40
 updated the homecontroller
+
+20-4-22
+
+0954
+I created images folder and sub folder of product inside it 
+
+1000
+Made some changes in product controller.
+
+1003
+It runned as expected 
+
+//Thankgod part-4 finished
 
 

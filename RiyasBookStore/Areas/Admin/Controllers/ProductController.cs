@@ -17,7 +17,6 @@ namespace RiyasBookStore.Areas.Admin.Controllers
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IWebHostEnvironment _hostEnvironment;
-        
 
         public ProductController(IUnitOfWork unitOfWork, IWebHostEnvironment hostEnvironment)
         {
@@ -44,12 +43,14 @@ namespace RiyasBookStore.Areas.Admin.Controllers
                 {
                     Text = i.Name,
                     Value = i.Id.ToString()
-                }),
+                })
             };
             if (id == null)
             {
+                // this is for create
                 return View(productVM);
             }
+            // this is for edit
             productVM.Product = _unitOfWork.Product.Get(id.GetValueOrDefault());
             if (productVM.Product == null)
             {
@@ -57,8 +58,6 @@ namespace RiyasBookStore.Areas.Admin.Controllers
             }
             return View(productVM);
         }
-
-        //post method
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -130,18 +129,14 @@ namespace RiyasBookStore.Areas.Admin.Controllers
             return View(productVM);
         }
 
-        //API calls
         #region API CALLS
-        [HttpGet]
 
+        [HttpGet]
         public IActionResult GetAll()
         {
-            //return NotFound
-            var allObj = _unitOfWork.Product.GetAll(includeProperties:"Category,CoverType");
+            var allObj = _unitOfWork.Product.GetAll(includeProperties: "Category,CoverType");
             return Json(new { data = allObj });
-
         }
-      
 
         [HttpDelete]
         public IActionResult Delete(int id)
@@ -149,13 +144,21 @@ namespace RiyasBookStore.Areas.Admin.Controllers
             var objFromDb = _unitOfWork.Product.Get(id);
             if (objFromDb == null)
             {
-                return Json(new { success = false, message = "Erroe while Deleting" });
+                return Json(new { success = false, message = "Error while deleting" });
+            }
+            string webRootPath = _hostEnvironment.WebRootPath;
+            string imagePath = null;
+            // var imagePath = Path.Combine(webRootPath, objFromDb.ImageUrl.TrimStart('\\'));
+            if (System.IO.File.Exists(imagePath))
+            {
+                System.IO.File.Delete(imagePath);
             }
             _unitOfWork.Product.Remove(objFromDb);
             _unitOfWork.Save();
             return Json(new { success = true, message = "Delete Successful" });
-            #endregion
-
         }
+
+        #endregion
+
     }
-}   
+}
