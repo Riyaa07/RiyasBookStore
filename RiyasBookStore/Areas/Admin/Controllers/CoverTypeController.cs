@@ -25,72 +25,67 @@ namespace RiyasBookStore.Areas.Admin.Controllers
 
         public IActionResult Upsert(int? id)
         {
-            CoverType coverType = new CoverType();
+            CoverType covertype = new CoverType();
             if (id == null)
             {
-                return View(coverType);
+                return View(covertype);
             }
 
-            coverType = _unitOfWork.CoverType.Get(id.GetValueOrDefault());
-            if (coverType == null)
+            covertype = _unitOfWork.CoverType.Get(id.GetValueOrDefault());
+            if (covertype == null)
             {
-                return NotFound(coverType);
+                return NotFound(covertype);
             }
-            return View(coverType);
+            return View(covertype);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Upsert(CoverType coverType)
+        public IActionResult Upsert(CoverType covertype)
         {
             if (ModelState.IsValid)
             {
-                var parameter = new DynamicParameters();
-                parameter.Add("@Name", coverType.Name);
-
-                if (coverType.Id == 0)
+                if (covertype.Id == 0)
                 {
-                    _unitOfWork.SP_Call.Execute(SD.Proc_CoverType_Create, parameter);
+                    _unitOfWork.CoverType.Add(covertype);
+                    _unitOfWork.Save();
                 }
                 else
                 {
-                    parameter.Add("@Id", coverType.Id);
-                    _unitOfWork.SP_Call.Execute(SD.Proc_CoverType_Update, parameter);
+                    _unitOfWork.CoverType.Update(covertype);
                 }
                 _unitOfWork.Save();
                 return RedirectToAction(nameof(Index));
+
             }
-            return View(coverType);
-        
+            return View(covertype);
 
-    }
+        }
 
-    //Api calls
-    #region API CALLS
-    [HttpGet]
+        //Api calls
+        #region API CALLS
+        [HttpGet]
 
         public IActionResult GetAll()
         {
-            var allObj = _unitOfWork.SP_Call.List<CoverType>(SD.Proc_CoverType_GetAll, null);
+            //return NotFound
+            var allObj = _unitOfWork.CoverType.GetAll();
             return Json(new { data = allObj });
+
         }
 
         [HttpDelete]
         public IActionResult Delete(int id)
         {
-            var parameter = new DynamicParameters();
-            parameter.Add("@Id", id);
-            var objFromDb = _unitOfWork.SP_Call.OneRecord<CoverType>(SD.Proc_CoverType_Get, parameter);
+            var objFromDb = _unitOfWork.CoverType.Get(id);
             if (objFromDb == null)
             {
-                return Json(new { success = false, message = "Error while deleting" });
+                return Json(new { success = true, message = "Erroe while Deleting" });
             }
-            _unitOfWork.SP_Call.Execute(SD.Proc_CoverType_Delete, parameter);
+            _unitOfWork.CoverType.Remove(objFromDb);
             _unitOfWork.Save();
             return Json(new { success = true, message = "Delete Successful" });
+            #endregion
         }
-
-        #endregion
     }
 }
- 
